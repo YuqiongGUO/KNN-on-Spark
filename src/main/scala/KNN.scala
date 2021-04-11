@@ -4,9 +4,9 @@ import math._
 import scala.util.Try
 import scala.collection.mutable.Map
 import scala.collection.mutable.HashMap
-import org.apache.spark.SparkConf;
-import org.apache.spark.SparkContext;
-import org.apache.spark.SparkContext._;
+import org.apache.spark.SparkConf
+import org.apache.spark.SparkContext
+import org.apache.spark.SparkContext._
 
 object KNN {
 
