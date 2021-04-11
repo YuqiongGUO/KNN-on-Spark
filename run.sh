@@ -1,6 +1,6 @@
 mvn package && \
 spark-submit \
-    --class xyz.jonaylor.KNN \
+    --class gyq.KNN \
     --master local \
     target/kNN-2.0.jar \
     datasets/small.csv \

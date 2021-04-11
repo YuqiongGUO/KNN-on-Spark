@@ -1,5 +1,4 @@
-
-package gyq.KNN
+// package gyq.KNN
 
 import math._
 import scala.util.Try
