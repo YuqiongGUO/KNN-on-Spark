@@ -21,10 +21,10 @@ object KNN {
         val K = argv(1).toInt
 
         //Basic setup
-        val jobName = "Naylor - KNN -> K = " + K
+        // val jobName = "Naylor - KNN -> K = " + K
 
         //Spark Configuration
-        val conf = new SparkConf().setAppName(jobName)
+        val conf = new SparkConf().setAppName("Spark_Knn_test")
         val sc = new SparkContext(conf)
 
 
