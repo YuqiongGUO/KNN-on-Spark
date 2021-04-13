@@ -8,7 +8,7 @@ import org.apache.spark.SparkConf
 import org.apache.spark.SparkContext
 import org.apache.spark.SparkContext._
 
-object KNN {
+object Spark_Knn {
 
     def main(argv: Array[String]) = {
 
@@ -24,7 +24,7 @@ object KNN {
         // val jobName = "Naylor - KNN -> K = " + K
 
         //Spark Configuration
-        val conf = new SparkConf().setAppName("Spark_Knn_test")
+        val conf = new SparkConf().setAppName("Spark_Knn")
         val sc = new SparkContext(conf)
 
 
