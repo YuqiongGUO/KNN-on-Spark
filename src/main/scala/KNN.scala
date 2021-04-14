@@ -21,12 +21,11 @@ object Spark_Knn {
         val K = argv(1).toInt
 
         //Basic setup
-        // val jobName = "Naylor - KNN -> K = " + K
-
+        val jobName = "Joanna - KNN -> K = " + K
+        var startTime = System.currentTimeMillis
         //Spark Configuration
-        val conf = new SparkConf().setAppName("Spark_Knn")
+        val conf = new SparkConf().setAppName(jobName)
         val sc = new SparkContext(conf)
-
 
         val broadcastK = sc.broadcast(K)
         val train = sc.textFile(pathTrain: String)
@@ -34,7 +33,7 @@ object Spark_Knn {
                                         _.split(",")
                                         .map(v => Try(v.toDouble).getOrElse(0.0))
                                     )
-        var startTime = System.currentTimeMillis
+        
 
         val test = train.zipWithIndex.map{case (k,v) => (v,k)}
 
