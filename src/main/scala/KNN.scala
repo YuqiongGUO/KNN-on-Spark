@@ -35,7 +35,7 @@ object Spark_Knn {
                                         .map(v => Try(v.toDouble).getOrElse(0.0))
                                     )
         var startTime = System.currentTimeMillis
-        
+
         val test = train.zipWithIndex.map{case (k,v) => (v,k)}
 
         val cart = test.cartesian(train)
@@ -68,6 +68,9 @@ object Spark_Knn {
 
         var runTime = System.currentTimeMillis - startTime
 
+        println("="*25)
+        println("%, runtime "+ runTime + "ms")
+        println("="*25)
         output.saveAsTextFile("./output");
     }
 
